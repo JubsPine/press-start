@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
   <title>Press Start to Help!</title>
 
-  <!-- Fonte pixel art -->
+  <!-- FONTE PIXEL ART -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-   <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger">
-        <div class="container">
-            <a class="navbar-brand pixel-font text-danger" href="#">Press Start</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- MENU DE NAVEGAÇÃO -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top mr-2 pixel-img" alt="Logo" />
+        <span class="pixel-font text-danger">Press Start</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="menuNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link pixel-font text-danger" href="#carouselEmergencias">Emergências</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pixel-font text-danger" href="#">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pixel-font text-danger" href="#">Contato</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#carouselEmergencias">Emergências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- HEADER -->
-  <header class="text-center py-4 border-bottom border-danger">
-    <img src="img/logo.png" alt="Logo" class="mb-2 pixel-img" style="height: 80px;" />
-    <h1 class="pixel-font text-white">Press Start to Help!</h1>
-    <p class="text-danger">Aprenda como agir em emergências</p>
+  <!-- HEADER COM IMAGEM DE FUNDO -->
+  <header class="hero-image d-flex align-items-center justify-content-center">
+    <div class="overlay-text text-center">
+      <h1 class="pixel-font text-outline-white hero-title">Press Start to Help!</h1>
+    </div>
   </header>
 
+  <!-- Subtítulo fora da imagem -->
+  <section class="text-center py-3 border-bottom border-danger bg-black">
+    <p class="text-danger">Aprenda como agir em emergências</p>
+  </section>
+
   <!-- CONTEÚDO PRINCIPAL -->
-  <main class="container mt-5">
-    <section>
-      <h2 class="pixel-font text-white text-center mb-4">Situações de Emergência</h2>
+  <section id="selecaoSituacoes" class="container mt-5">
+    <h2 class="pixel-font text-white text-center mb-4">Escolha uma Situação</h2>
+    <div class="row text-center justify-content-center">
 
-      <div id="carouselEmergencias" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-
-          <!-- SITUAÇÃO 1 -->
-          <div class="carousel-item active">
-            <img src="engasgo.jpeg" class="d-block w-100 pixel-img" alt="Engasgo" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Engasgo</h5>
-              <p>Incline a pessoa para frente e dê 5 tapas entre as escápulas com firmeza.</p>
-            </div>
-          </div>
-
-          <!-- SITUAÇÃO 2 -->
-          <div class="carousel-item">
-            <img src="img/pixel-art2.png" class="d-block w-100 pixel-img" alt="Convulsão" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Convulsão</h5>
-              <p>Não contenha os movimentos. Proteja a cabeça e mantenha a pessoa de lado.</p>
-            </div>
-          </div>
-
+      <!-- ENGASGO -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="card bg-dark border border-danger p-2">
+          <img src="img/engasgo_vitrine.png" alt="Engasgo" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">Engasgo</h5>
+          <a href="cases.html" class="botao-retro pixel-font">Ver mais</a>
         </div>
-
-        <!-- Controles -->
-        <a class="carousel-control-prev" href="#carouselEmergencias" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselEmergencias" role="button" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
       </div>
-    </section>
-  </main>
+
+      <!-- AVC -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="card bg-dark border border-danger p-2">
+          <img src="img/avc_vitrine.png" alt="Convulsão" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">AVC</h5>
+          <a href="cases.html" class="botao-retro pixel-font">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- PICADA DE ESCORPIÃO -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="card bg-dark border border-danger p-2">
+          <img src="img/escorpiao_vitrine.png" alt="Sangramento Nasal" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">Picada de Escorpião</h5>
+          <a href="cases.html" class="botao-retro pixel-font">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- QUEIMADURA -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="card bg-dark border border-danger p-2">
+          <img src="img/convulsao_detalhe.jpeg" alt="Queimadura" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">Queimadura</h5>
+          <a href="cases.html" class="botao-retro pixel-font">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- POSIÇÃO DE CONFORTO -->
+      <div class="col-md-3 col-6 mb-4">
+        <div class="card bg-dark border border-danger p-2">
+          <img src="img/convulsao_detalhe.jpeg" alt="Desmaio" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">Desmaio</h5>
+          <a href="cases.html" class="botao-retro pixel-font">Ver mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="text-center mt-5 py-4 border-top border-danger">
@@ -90,9 +113,10 @@
     <p class="text-danger small mb-0">Press Start to Help! © 2025 — Projeto acadêmico sem fins lucrativos.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+  
 </html>

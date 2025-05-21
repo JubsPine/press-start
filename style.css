@@ -4,8 +4,54 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+/* HERO COM BACKGROUND */
+.hero-image {
+  background-image: url("img/retro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.overlay-text {
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+/* EFEITO DE FADE COM SCROLL */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
+  z-index: 1;
+}
+
 .pixel-font {
   font-family: 'Press Start 2P', cursive !important;
+}
+
+.text-outline-bold {
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black,
+    -2px  0px 0 black,
+     2px  0px 0 black,
+     0px -2px 0 black,
+     0px  2px 0 black;
 }
 
 .pixel-img {
@@ -21,12 +67,60 @@ body {
   border-radius: 5px;
 }
 
-h5, p {
+h5,
+p {
   color: white;
+}
+
+.detalhe-emergencia {
+  padding: 20px 0;
+}
+
+.d-none {
+  display: none;
 }
 
 footer {
   background-color: #111;
+}
+
+#selecaoSituacoes .card {
+  transition: transform 0.2s ease-in-out;
+}
+
+#selecaoSituacoes .card:hover {
+  transform: scale(1.05);
+  background-color: #111;
+}
+
+#selecaoSituacoes h5 {
+  font-size: 0.6rem;
+}
+
+#selecaoSituacoes .btn {
+  font-size: 0.5rem;
+  border: 2px solid white;
+}
+
+.botao-retro {
+  display: inline-block;
+  background-color: #FFE600;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  padding: 10px 20px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.botao-retro:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  box-shadow: 3px 3px 0 black;
+  text-decoration: none;
 }
 
 /* Menu */

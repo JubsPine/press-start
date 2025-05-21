@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Start to Help!</title>
+
+  <!-- Fonte pixel art -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger">
+    <div class="container">
+      <a class="navbar-brand pixel-font text-danger" href="#">Press Start</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#carouselEmergencias">Emergências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pixel-font text-danger" href="#">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="text-center py-4 border-bottom border-danger">
+    <h1 class="pixel-font text-white">Press Start to Help!</h1>
+    <p class="text-danger">Aprenda como agir em emergências</p>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mt-5">
+    <section>
+      <h2 class="pixel-font text-white text-center mb-4">Situações de Emergência</h2>
+
+      <div id="carouselEmergencias" class="carousel slide" data-ride="carousel">
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-5 py-4 border-top border-danger">
+    <p class="text-white small mb-1">Desenvolvido por alunos do curso DSM da FATEC Indaiatuba.</p>
+    <p class="text-danger small mb-0">Press Start to Help! © 2025 — Projeto acadêmico sem fins lucrativos.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
