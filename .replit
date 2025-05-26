@@ -4,6 +4,7 @@ modules = ["web:v2-20230623-0b7a606"]
 
 [nix]
 channel = "stable-23_11"
+packages = ["nodejs_latest", "emacsPackages.express"]
 
 [deployment]
 publicDir = "/"
