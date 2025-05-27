@@ -4,6 +4,11 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+.logo-navbar {
+  height: 30px;
+  image-rendering: pixelated;
+}
+
 /* HERO COM BACKGROUND */
 .hero-image {
   background-image: url("img/retro.png");
@@ -45,13 +50,13 @@ body {
   color: white;
   text-shadow:
     -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black,
-    -2px  0px 0 black,
-     2px  0px 0 black,
-     0px -2px 0 black,
-     0px  2px 0 black;
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    -2px 0px 0 black,
+    2px 0px 0 black,
+    0px -2px 0 black,
+    0px 2px 0 black;
 }
 
 .pixel-img {
@@ -84,22 +89,31 @@ footer {
   background-color: #111;
 }
 
-#selecaoSituacoes .card {
-  transition: transform 0.2s ease-in-out;
+.card-retro {
+  border-radius: 0;
+  box-shadow:
+    4px 4px 0 0 white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 420px;
 }
 
-#selecaoSituacoes .card:hover {
-  transform: scale(1.05);
+.card-retro img {
+  border-radius: 0;
+  image-rendering: pixelated;
+}
+
+.card-retro h5,
+.card-retro p {
+  margin: 0.5rem 0;
+}
+
+.card-retro:hover {
   background-color: #111;
-}
-
-#selecaoSituacoes h5 {
-  font-size: 0.6rem;
-}
-
-#selecaoSituacoes .btn {
-  font-size: 0.5rem;
-  border: 2px solid white;
+  transform: scale(1.02);
 }
 
 .botao-retro {
