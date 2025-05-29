@@ -16,29 +16,27 @@
 <body>
 
   <!-- MENU DE NAVEGAÇÃO -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-danger">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="img/logo.png" class="logo-navbar mr-2" alt="Logo Press Start" />
-        <span class="pixel-font text-danger">Press Start</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo.png" class="logo-navbar mr-2" alt="Logo Press Start" />
+      <span class="pixel-font text-danger">Press Start</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav" href="index.html">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="menuNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link pixel-font text-danger" href="emergencia.html">Emergências</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link pixel-font text-danger" href="#">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link pixel-font text-danger" href="contato.html">Contato</a>
-          </li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link pixel-font text-danger" href="emergencia.html">Emergências</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pixel-font text-danger" href="sobre.html">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pixel-font text-danger" href="contato.html">Contatos</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
@@ -51,7 +49,7 @@
 
   <!-- FRASE DE IMPACTO -->
   <section class="text-center py-3 border-bottom border-danger bg-black">
-    <p class="text-danger">Aprenda como agir em emergências</p>
+    <p id="p1" class="text-danger">Aprenda como agir em emergências</p>
   </section>
 
   <!-- CONTEÚDO PRINCIPAL -->
@@ -59,9 +57,8 @@
     <h2 class="pixel-font text-white text-center mb-4">Escolha uma Situação</h2>
     <div class="row justify-content-center">
 
-      <!-- COMO ESTAMOS COM 5 CARDS, ESTÁ ORGANIZADO DESSA FORMA -->
       <!-- ENGASGO -->
-      <div class="col-md-4 col-6 mb-4 d-flex">
+      <div class="col-md-3 col-6 mb-4 d-flex">
         <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column">
           <img src="img/engasgo_vitrine.png" alt="Engasgo" class="img-fluid pixel-img mb-2" />
           <h5 class="pixel-font text-danger mb-2">Engasgo</h5>
@@ -72,7 +69,7 @@
       </div>
 
       <!-- AVC -->
-      <div class="col-md-4 col-6 mb-4 d-flex">
+      <div class="col-md-3 col-6 mb-4 d-flex">
         <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column">
           <img src="img/avc_vitrine.png" alt="Convulsão" class="img-fluid pixel-img mb-2" />
           <h5 class="pixel-font text-danger mb-2">AVC</h5>
@@ -83,7 +80,7 @@
       </div>
 
       <!-- PICADA DE ESCORPIÃO -->
-      <div class="col-md-4 col-6 mb-4 d-flex">
+      <div class="col-md-3 col-6 mb-4 d-flex">
         <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column">
           <img src="img/escorpiao_vitrine.png" alt="Sangramento Nasal" class="img-fluid pixel-img mb-2" />
           <h5 class="pixel-font text-danger mb-2">Picada de Escorpião</h5>
@@ -94,24 +91,12 @@
       </div>
 
       <!-- QUEIMADURA -->
-      <div class="row justify-content-center">
-        <div class="col-md-4 col-6 mb-4 d-flex">
-          <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column">
-            <img src="img/queimadura_vitrine.png" alt="Queimadura" class="img-fluid pixel-img mb-2" />
-            <h5 class="pixel-font text-danger mb-2">Queimadura</h5>
-            <p class="text-white small mb-2">Queimaduras podem ser graves. Aprenda a agir corretamente para minimizar os
-              danos.</p>
-            <a href="cases.html" class="botao-retro pixel-font">QUIZ</a>
-          </div>
-        </div>
-
-        <!-- INFARTO -->
-        <div class="col-md-4 col-6 mb-4 d-flex">
-          <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column" <img src="img/convulsao_detalhe.jpeg"
-            alt="Infarto" class="img-fluid pixel-img mb-2" />
-          <h5 class="pixel-font text-danger mb-2">Infarto</h5>
-          <p class="text-white small mb-0">Dor no peito, suor frio… E agora? Teste seus conhecimentos e veja se você
-            sabe identificar e agir corretamente diante de um infarto.</p>
+      <div class="col-md-3 col-6 mb-4 d-flex">
+        <div class="card card-retro bg-dark p-2 h-100 d-flex flex-column">
+          <img src="img/queimadura_vitrine.png" alt="Queimadura" class="img-fluid pixel-img mb-2" />
+          <h5 class="pixel-font text-danger mb-2">Queimadura</h5>
+          <p class="text-white small mb-2">Queimaduras podem ser graves. Aprenda a agir corretamente para minimizar os
+            danos.</p>
           <a href="cases.html" class="botao-retro pixel-font">QUIZ</a>
         </div>
       </div>
@@ -119,9 +104,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="text-center mt-5 py-4 border-top border-danger">
+  <footer class="text-center mt-5 py-4">
     <p class="text-white small mb-1">Desenvolvido por alunos do curso DSM da FATEC Indaiatuba.</p>
-    <p class="text-danger small mb-0">Press Start to Help! © 2025 — Projeto acadêmico sem fins lucrativos.</p>
+    <p id="p1"class="text-danger small mb-0">Press Start to Help! © 2025 — Projeto acadêmico sem fins lucrativos.</p>
   </footer>
 
   <!-- SCRIPTS -->
