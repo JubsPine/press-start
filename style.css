@@ -78,6 +78,18 @@ h1, p{
     0px 3px 0 black;
 }
 
+h4 {
+  text-shadow:
+    -2px -2px 0 red,
+    2px -2px 0 red,
+    -2px 2px 0 red,
+    2px 2px 0 red,
+    -2px 0px 0 red,
+    2px 0px 0 red,
+    0px -2px 0 red,
+    0px 2px 0 red;
+}
+
 h5 {
   text-shadow:
     -2px -2px 0 white,
@@ -217,4 +229,45 @@ footer {
     1px -1px 0 red,
     -1px 1px 0 red,
     1px 1px 0 red;
+}
+
+.carousel-text {
+  transition: opacity 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.carousel-text.active h3 {
+  font-size: 18px;
+}
+
+form input[type="radio"] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Centraliza imagens e ajusta tamanho */
+
+.carousel-img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.carousel-item p {
+  margin-top: 1rem;
+  text-shadow: 1px 1px 2px black; /* ajuda na leitura sobre fundos claros */
+}
+
+/* Responsividade para o formulário e carrossel */
+@media (max-width: 768px) {
+  form.pixel-font {
+    font-size: 10px;
+  }
+
+  .carousel-item p {
+    font-size: 12px;
+  }
+
+  .pixel-font {
+    font-size: 10px;
+  }
 }
