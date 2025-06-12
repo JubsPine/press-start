@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
   <!-- MENU DE NAVEGAÇÃO -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -41,7 +40,7 @@
 
   <!-- HEADER -->
   <header class="text-center py-4 border-bottom border-danger">
-    <h1 id="tituloSobre" class="pixel-font text-danger">Situações de Emergência</h1>
+    <h1 id="titulo" class="pixel-font text-danger">Situações de Emergência</h1>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
@@ -69,48 +68,52 @@
 
       <div id="resultado-engasgo" class="mt-3"></div>
 
-      <!-- DIV CARROSSEL OCULTA ENGASGO-->
-      <div id="carrossel-engasgo" class="d-none border-bottom border-danger">
-        <h3 class="text-danger pixel-font text-center">Manobra de Heimlich</h3>
-        <div id="carouselHeimlich" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner text-center">
-            <div class="carousel-item active text-center d-flex flex-column align-items-center">
-              <img src="img/engasgo_vitrine.png" class="img-fluid carousel-img" alt="Passo 1" />
-              <p class="text-white pixel-font text-center">1. Fique atrás da vítima e posicione os braços ao redor da cintura.</p>
+      <!-- DIV CARROSSEL OCULTA ENGASGO -->
+      <div id="secao-carrossel" class="d-none"></div>
+        <div class="carrossel-container border-bottom border-danger">
+          <h3 class="text-danger pixel-font text-center">Manobra de Heimlich</h3>
+          <div id="carouselHeimlich" class="carousel" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active d-flex flex-column align-items-center">
+                <img src="img/engasgo_vitrine.png" class="img-fluid carousel-img" alt="Passo 1" />
+                <p class="text-white pixel-font mt-2">1. Pessoa com engasgo.</p>
+              </div>
+              <div class="carousel-item d-flex flex-column align-items-center">
+                <img src="img/engasgo_2.png" class="img-fluid carousel-img" alt="Passo 2" />
+                <p class="text-white pixel-font mt-2">2. Posicione atrás da pessoa. Feche uma mão em punho e posicione entre o umbigo e o peito.</p>
+              </div>
+              <div class="carousel-item d-flex flex-column align-items-center">
+                <img src="img/engasgo_3.png" class="img-fluid carousel-img" alt="Passo 3" />
+                <p class="text-white pixel-font mt-2">3. Puxe para dentro e para cima com força até desobstruir.</p>
+              </div>
+              <div class="carousel-item d-flex flex-column align-items-center">
+                <img src="img/engasgo_4.png" class="img-fluid carousel-img" alt="Passo 4" />
+                <p class="text-white pixel-font mt-2">4. Acalmar a pessoa após o susto.</p>
+              </div>
             </div>
-            <div class="carousel-item active text-center d-flex flex-column align-items-center">
-              <img src="img/engasgo_2.png" class="img-fluid carousel-img" alt="Passo 2" />
-              <p class="text-white pixel-font">2. Feche uma mão em punho e posicione entre o umbigo e o peito.</p>
-            </div>
-            <div class="carousel-item active text-center d-flex flex-column align-items-center">
-              <img src="img/engasgo_3.png" class="img-fluid carousel-img" alt="Passo 3" />
-              <p class="text-white pixel-font">3. Puxe para dentro e para cima com força até desobstruir.</p>
-            </div>
-            <div class="carousel-item active text-center d-flex flex-column align-items-center">
-              <img src="img/engasgo_4.png" class="img-fluid carousel-img" alt="Passo 4" />
-              <p class="text-white pixel-font">4. Acalme a pessoa após o susto.</p>
-            </div>
+
+            <!--  VAI E VOLTA CARRROSSEL -->
+            <a class="carousel-control-prev" href="#carouselHeimlich" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon bg-danger rounded-circle" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHeimlich" role="button" data-slide="next">
+              <span class="carousel-control-next-icon bg-danger rounded-circle" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselHeimlich" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon bg-danger rounded-circle" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselHeimlich" role="button" data-slide="next">
-            <span class="carousel-control-next-icon bg-danger rounded-circle" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-          </a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center mt-5 py-4 fixed-bottom">
+  <footer class="text-center mt-5 py-4">
     <p class="text-white small mb-1">Desenvolvido por alunos do curso DSM da FATEC Indaiatuba.</p>
     <p class="text-danger small mb-0">Press Start to Help! © 2025 — Projeto acadêmico sem fins lucrativos.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
