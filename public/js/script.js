@@ -4,14 +4,22 @@ if ("geolocation" in navigator) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
 
-      fetch("https://9e09ee34-1050-485a-9e76-a2ebedc5a332-00-1um8t03yn84ly.spock.replit.dev/localizacao", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ latitude, longitude })
-      })
+      // Chama API passando coordenadas
+      fetch(`backend/api.php?acao=listar_postos&lat=${latitude}&lng=${longitude}`)
         .then(res => res.json())
-        .then(data => console.log("Resposta do backend:", data))
-        .catch(err => console.error("Erro ao enviar localização:", err));
+        .then(data => {
+          console.log("Postos próximos:", data);
+
+          // Exemplo: exibir em lista
+          const lista = document.getElementById("lista-postos");
+          lista.innerHTML = "";
+          data.forEach(posto => {
+            const li = document.createElement("li");
+            li.textContent = `${posto.NOME} - ${posto.ENDERECO} (${posto.TELEFONE})`;
+            lista.appendChild(li);
+          });
+        })
+        .catch(err => console.error("Erro ao buscar postos:", err));
     },
     function (error) {
       console.error("Erro ao obter localização:", error.message);
