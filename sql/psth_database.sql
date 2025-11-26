@@ -37,7 +37,7 @@ CREATE TABLE RESPOSTAS (
 CREATE TABLE RESULTADOS (
     ID_RESULTADO INT AUTO_INCREMENT PRIMARY KEY,
     ID_QUESTIONARIO INT NOT NULL,
-    ID_SESSAO VARCHAR(50), -- opcional, identifica a sessão do usuário
+    ID_SESSAO VARCHAR(50), -- identifica a sessão do usuário
     PERMISSAO_LOC BOOLEAN DEFAULT FALSE,
     LATITUDE DECIMAL(10,7),
     LONGITUDE DECIMAL(10,7),
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS POSTOS_SAUDE (
   CRIACAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- (Opcional) Tabela para armazenar respostas anônimas com consentimento de localização
+-- Tabela para armazenar respostas anônimas com consentimento de localização
 CREATE TABLE IF NOT EXISTS PERMISSOES (
   ID_PERMISSAO INT AUTO_INCREMENT PRIMARY KEY,
   ID_QUESTIONARIO INT DEFAULT NULL,

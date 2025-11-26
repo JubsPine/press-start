@@ -1,11 +1,11 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "PRESS_START_TO_HELP";
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$db = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
 
-//conexão
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
 //validação
 if ($conn->connect_error) {
