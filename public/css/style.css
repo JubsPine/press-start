@@ -1,7 +1,19 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: #000;
   color: white;
   font-family: 'Press Start 2P', cursive;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+main, #characters {
+  flex: 1 !important;
 }
 
 .logo-navbar {
@@ -89,7 +101,7 @@ h4 {
     0px 2px 0 red;
 }
 
-h5 {
+/* h5 {
   text-shadow:
     -2px -2px 0 white,
     2px -2px 0 white,
@@ -99,7 +111,7 @@ h5 {
     2px 0px 0 white,
     0px -2px 0 white,
     0px 2px 0 white;
-}
+} */
 
 #p1 {
   text-shadow:
